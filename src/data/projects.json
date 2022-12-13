@@ -1,0 +1,135 @@
+[
+	{
+		"title": "Waypoint Living Spaces PDP",
+		"links": [
+			"https://www.waypointlivingspaces.com/all-products/cabinet-details",
+			"https://www.waypointlivingspaces.com/all-products/cabinet-styles",
+			"https://www.waypointlivingspaces.com/all-products/cabinet-finishes",
+			"https://www.waypointlivingspaces.com/all-products/cabinet-hardware"
+		],
+		"coverImg": "../images/project-screengrabs/waypoint-pconfig.jpg",
+		"tech": [
+			"html",
+			"css/scss",
+			"javascript",
+			"jquery",
+			"aem"
+		],
+		"description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+	},
+	{
+		"title": "American Woodmark Corporate Site",
+		"links": [
+			"https://americanwoodmark.com"
+		],
+		"coverImg": "../images/project-screengrabs/american-woodmark.jpg",
+		"tech": [
+			"aem",
+			"html",
+			"css/scss",
+			"jquery",
+			"javascript"
+		],
+		"description": "<p>Some copy goes <strong>here</strong></p>"
+	},
+	{
+		"title": "Yeti Production",
+		"links": [
+			"https://www.yetiproduction.com"
+		],
+		"coverImg": "../images/project-screengrabs/yeti-production.jpg",
+		"tech": [
+			"html",
+			"css/scss",
+			"tailwinds",
+			"javascript",
+			"gatsby",
+			"gsap",
+			"strapi"
+		],
+		"description": "<p>Some copy goes <strong>here</strong></p>"
+	},
+	{
+		"title": "Shock Market",
+		"links": [
+			"https://www.shockmarket.org"
+		],
+		"coverImg": "../images/project-screengrabs/shockmarket.jpg",
+		"tech": [
+			"html",
+			"css/scss",
+			"javascript",
+			"gatsby",
+			"strapi"
+		],
+		"description": "<p>Some copy goes <strong>here</strong></p>"
+	},
+	{
+		"title": "MullenLowe U.S.",
+		"links": [
+			"https://us.mullenlowe.com"
+		],
+		"coverImg": "../images/project-screengrabs/mlus.jpg",
+		"tech": [
+			"html",
+			"css/scss",
+			"javascript",
+			"gatsby",
+			"gsap",
+			"strapi"
+		],
+		"description": "<p>Some copy goes <strong>here</strong></p>"
+	},
+	{
+		"title": "Corona USA",
+		"links": [
+			"https://www.coronausa.com"
+		],
+		"coverImg": "../images/project-screengrabs/coronausa.jpg",
+		"tech": [
+			"html",
+			"css/scss",
+			"javascript",
+			"jquery",
+			"shopify"
+		],
+		"description": "<p>Some copy goes <strong>here</strong></p>"
+	},
+	{
+		"title": "Today’s Military Relevant Articles",
+		"links": [
+			"https://www.todaysmilitary.com/relevant-articles"
+		],
+		"coverImg": "../images/project-screengrabs/tm-relevant-articles.jpg",
+		"tech": [
+			"html",
+			"css/scss",
+			"javascript",
+			"jquery",
+			"drupal"
+		],
+		"description": "<p>Some copy goes <strong>here</strong></p>"
+	},
+	{
+		"title": "Today’s Military Forbes Stories",
+		"links": [
+			"https://www.todaysmilitary.com/careers-benefits/employment-after-military"
+		],
+		"secondaryLinks": [
+			"https://www.todaysmilitary.com/careers-benefits/employment-after-military/nicole-baldwin",
+			"https://www.todaysmilitary.com/careers-benefits/employment-after-military/nick-baucom",
+			"https://www.todaysmilitary.com/careers-benefits/employment-after-military/grant-page",
+			"https://www.todaysmilitary.com/careers-benefits/employment-after-military/dyan-gibbens",
+			"https://www.todaysmilitary.com/careers-benefits/employment-after-military/devlin-braswell"
+		],
+		"coverImg": "../images/project-screengrabs/tm-forbes.jpg",
+		"tech": [
+			"html",
+			"css/scss",
+			"javascript",
+			"jquery",
+			"drupal"
+		],
+		"description": "<p>Some copy goes <strong>here</strong></p>"
+	}
+]

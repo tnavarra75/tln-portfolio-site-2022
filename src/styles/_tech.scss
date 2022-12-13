@@ -1,0 +1,67 @@
+.tech {
+  padding-top: 200px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3vw;
+  }
+
+  &__category-name {
+    font-family: 'OpenSans SemiCond SemiBold';
+    opacity: .4;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    width: min-content;
+  }
+}
+
+
+.tech-item {
+  color: var(--main-color);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-transform: capitalize;
+  @include fontSize(16);
+  margin-bottom: 15px;
+}
+
+.tech-icon {
+
+  div {
+    position: relative;
+    width: 20px;
+    aspect-ratio: 1 / 1;
+    opacity: .6;
+  }
+
+  svg {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    fill: var(--black-white);
+
+    path,
+    polygon {
+      fill: var(--black-white);
+      filter: none;
+    }
+  }
+}
+
+// .light {
+//   .tech-item {
+//     color: $dark;
+//   }
+
+//   .tech-icon {
+//     .st0 {
+//       fill: $dark;
+//       filter: none;
+//     }
+//   }
+// }

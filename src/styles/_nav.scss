@@ -1,0 +1,31 @@
+.nav {
+  font-family: 'OpenSans SemiCond Bold';
+  display: flex;
+  gap: 2.5vw;
+  align-items: center;
+
+  &__items {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__link {
+    font-family: 'OpenSans SemiCond Regular';
+    color: var(--main-color);
+    text-decoration: none;
+    @include fontSize(17);
+    transition: .2s ease-in-out;
+
+    &.active {
+      color: var(--accent-color);
+    }
+
+    @include can-hover() {
+      &:hover {
+        color: var(--accent-color);
+        transition: .2s ease-in-out;
+      }
+    }
+  }
+}
+

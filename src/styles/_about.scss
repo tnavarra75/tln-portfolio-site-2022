@@ -1,0 +1,29 @@
+.about {
+
+  padding-top: 200px;
+
+  &__subhead {
+    color: var(--accent-color);
+    padding-bottom: 20px;
+  }
+
+  &__text {
+    line-height: 1.7;
+    padding-bottom: 1rem;
+    text-align: justify;
+  }
+
+  &__headshot {
+    position: relative;
+    float: right;
+    width: 33%;
+    max-width: 300px;
+    shape-outside: polygon(36.375% 0, 100% 0, 100% 100%, 0 100%);
+    margin: 0 0 2rem 4rem;
+
+    svg {
+      display: block;
+    }
+  }
+
+}

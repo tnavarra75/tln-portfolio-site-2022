@@ -1,0 +1,106 @@
+$gapWidth: 2vw;
+
+.projects {
+  padding-top: 100px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: $gapWidth;
+  grid-auto-flow: dense;
+
+  &.active {
+    .grid-item {
+      opacity: .1;
+      transition: opacity .3s ease-in-out;
+
+      &.active {
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  // &:hover {
+  //   .grid-item:not(:hover) {
+  //       opacity: .1;
+  //       transition: opacity .3s ease-in-out;
+  //     }
+  //   }
+}
+
+.grid-item {
+  position: relative;
+  cursor: pointer;
+  aspect-ratio: 1584 / 966;
+  grid-column: span 3;
+
+  &:focus-within {
+    border: 1px solid magenta;
+
+    >.grid-image {
+      transform: translateX(calc(100% + $gapWidth - .5px));
+      transition: transform .5s ease-in-out;
+      z-index: 400;
+    }
+  }
+
+    .project-card {
+      opacity: 1;
+      transition: .3s ease-in-out;
+      // padding-left: $gapWidth;
+      z-index: 200;
+    }
+
+    .grid-image {
+      cursor: pointer;
+      position: absolute;
+      outline: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: transform .5s ease-in-out;
+      z-index: 300;
+    }
+  
+
+  .gatsby-image-wrapper {
+    display: block;
+    height: 100%;
+  }
+
+  &:nth-of-type(odd) {
+    &.active {
+      >.grid-image {
+        transform: translateX(calc(100% + $gapWidth - .5px));
+        transition: transform .5s ease-in-out;
+        z-index: 400;
+      }
+    }
+  }
+
+  &:nth-of-type(even) {
+    &.active {
+      >.grid-image {
+        transform: translateX(calc((100% + $gapWidth - .5px) * -1));
+        transition: transform .5s ease-in-out;
+        z-index: 400;
+      }
+    }
+  }
+}
+
+.light {
+  .grid-item .grid-image {
+    transition: border .3s ease-in-out, transform .5s ease-in-out;
+    border: .5px solid rgba($color: #000, $alpha: .3);
+  }
+}
+
+.dark {
+  .grid-item .grid-image {
+    transition: border .3s ease-in-out, transform .5s ease-in-out;
+    border: .5px solid rgba($color: #000, $alpha: .5);
+  }
+}

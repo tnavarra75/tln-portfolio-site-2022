@@ -1,0 +1,34 @@
+$dark: #17171d;
+$turquoise: #05d2e9;
+$turquoiseDk: #3597a2;
+$light: #f7f7f7;
+$orange: #FFB555;
+$primaryLight: $orange;
+$primaryDark: $turquoise;
+
+$base: 16px;
+
+:root {
+  --toggle-transition: .2s ease-in-out;
+}
+
+:root.light {
+  --background-color: #f9f9f9;
+  --background-intro: #f2f2f2;
+  // --background-color: #f7f7f7;
+  --accent-color: #04b0c3;
+  --close-tag-fill: #04b0c3;
+  --main-color: #232323;
+  --black-white: #000;
+  --yellow: #F6E40C;
+}
+
+:root.dark {
+  --background-color: #202028;
+  --background-intro: #17171d;
+  --accent-color: #04C1D6;
+  --close-tag-fill: transparent;
+  --main-color: #f7f7f7;
+  --black-white: #fff;
+  --yellow: #F6E40C;
+}

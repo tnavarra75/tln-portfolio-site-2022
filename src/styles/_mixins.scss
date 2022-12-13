@@ -1,0 +1,14 @@
+@mixin fontSize($size, $base: 16) {
+  font-size: #{$size}px;
+  font-size: #{calc($size / $base)}rem;
+}
+
+
+@mixin can-hover {
+  @media screen and (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+// @mixin anythingRem($property, $pixels, $base: 16) {
+//   $property: #{calc($pixels / $base)}rem;
+// }
