@@ -1,20 +1,91 @@
 .nav {
   font-family: 'OpenSans SemiCond Bold';
   display: flex;
+  flex-direction: column;
   gap: 2.5vw;
-  align-items: center;
+
+  @media screen and (min-width: 1024px) {
+    position: initial;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+  }
 
   &__items {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
     display: flex;
-    gap: 40px;
+    flex-direction: column;
+    gap: 4rem;
+    margin: 0 auto;
+    padding: 8rem 5vw 2rem;
+    background-color: var(--background-intro);
+    transition: .2s ease-in;
+
+    &.open {
+      left: 0;
+      transition: .4s ease-out;
+    }
+
+    @media screen and (min-width: 1024px) {
+      position: static;
+      height: auto;
+      flex-direction: row;
+      width: initial;
+      padding: 0;
+      margin: 0;
+      background-color: transparent;
+    }
+  }
+
+  &__item {
+    &--socials {
+      @media screen and (min-width: 1024px) {
+        display: none;
+      }
+
+      .socials {
+        padding-top: 2rem;
+        position: static;
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+
+        .social {
+          width: auto;
+          height: 2.6rem;
+          margin-bottom: 0;
+
+          &.email {
+            height: 2rem;
+          }
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+    }
   }
 
   &__link {
-    font-family: 'OpenSans SemiCond Regular';
+    font-family: 'OpenSans SemiCond SemiBold';
     color: var(--main-color);
     text-decoration: none;
-    @include fontSize(17);
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: .5px;
     transition: .2s ease-in-out;
+
+    @media screen and (min-width: 1024px) {
+      font-size: clamp(1.4rem, 1.2vw, 1.6rem);
+    }
 
     &.active {
       color: var(--accent-color);

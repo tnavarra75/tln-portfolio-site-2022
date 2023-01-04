@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import { GatsbyImage } from 'gatsby-plugin-image'
 import OutArrow from '../images/svg/arrow_outward.svg'
 import TechItem from '../components/techItem';
 import { getTech } from '../utils/getTech'
 import MoreProjects from '../components/moreProjects'
+import DetailHero from '../components/detailHero'
 
 const ProjectDetail = ({ data, location }) => {
   const projectDetails = data.allProjectsJson.edges[0].node;
@@ -13,7 +13,12 @@ const ProjectDetail = ({ data, location }) => {
   return (
     <Layout location={location} scheme={location.state?.mode ? location.state.mode : 'dark'} detailPage>
       <div className='container'>
-      <GatsbyImage image={projectDetails.coverImg.childImageSharp.gatsbyImageData} alt={projectDetails.title} />
+      {/* <GatsbyImage image={projectDetails.coverImg.childImageSharp.gatsbyImageData} alt={projectDetails.title} /> */}
+      <DetailHero 
+        vid={projectDetails?.heroVid}
+        img={projectDetails.heroImg?.childImageSharp.gatsbyImageData}
+        mobileImg={projectDetails.heroImgMobile.childImageSharp.gatsbyImageData} 
+      />
       <h1 className='detail-pg__title'>{projectDetails.title}</h1>
       <div className='detail-pg__details-wrap'>
         <div className='detail-pg__desc'>
@@ -51,7 +56,18 @@ export const query = graphql`
           links
           tech
           description
+          heroVid
           coverImg {
+            childImageSharp {
+              gatsbyImageData(formats: [AUTO])
+            }
+          }
+          heroImg {
+            childImageSharp {
+              gatsbyImageData(formats: [AUTO])
+            }
+          }
+          heroImgMobile {
             childImageSharp {
               gatsbyImageData(formats: [AUTO])
             }

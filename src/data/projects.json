@@ -7,7 +7,10 @@
 			"https://www.waypointlivingspaces.com/all-products/cabinet-finishes",
 			"https://www.waypointlivingspaces.com/all-products/cabinet-hardware"
 		],
-		"coverImg": "../images/project-screengrabs/waypoint-pconfig.jpg",
+		"mediaType": "vid",
+		"coverImg": "../images/project-screengrabs/no-browser-bar/waypoint-pconfig.jpg",
+		"heroImg": "../images/project-screengrabs/full-screen-browser/waypoint-fs.jpg",
+		"heroImgMobile": "../images/project-screengrabs/mobile/waypoint-m.jpg",
 		"tech": [
 			"html",
 			"css/scss",
@@ -15,14 +18,16 @@
 			"jquery",
 			"aem"
 		],
-		"description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+		"description": "<p>Working directly with the backend developer I was responsible for the parts of this large site that are related to the product using a combination of AJAX calls, data layers and custom AEM HTL templates. The PDP detail page is a tool that allows the viewer to see what cabinet styles, material, and color/finish combinations are available. The informational copy for each combination is dynamic as well as the content of the carousel lower on the page. There is also the ability to overlay hardware selections. The filterable landing pages for style, color and hardware show a more traditional view. A compare tool on the style and color/finish pages allows the viewer to see selected styles side by side.</p>"
 	},
 	{
 		"title": "American Woodmark Corporate Site",
 		"links": [
 			"https://americanwoodmark.com"
 		],
-		"coverImg": "../images/project-screengrabs/american-woodmark.jpg",
+		"coverImg": "../images/project-screengrabs/no-browser-bar/american-woodmark.jpg",
+		"heroImg": "../images/project-screengrabs/full-screen-browser/american-woodmark-fs.jpg",
+		"heroImgMobile": "../images/project-screengrabs/mobile/american-woodmark-m.jpg",
 		"tech": [
 			"aem",
 			"html",
@@ -30,14 +35,17 @@
 			"jquery",
 			"javascript"
 		],
-		"description": "<p>Some copy goes <strong>here</strong></p>"
+		"description": "<p>Working with a development lead I styled core AEM components to match designs from Sketch, styled Market forms, created animated the buttons, used core components to create custom carousel styles.</p>"
 	},
 	{
 		"title": "Yeti Production",
 		"links": [
 			"https://www.yetiproduction.com"
 		],
-		"coverImg": "../images/project-screengrabs/yeti-production.jpg",
+		"mediaType": "vid",
+		"coverImg": "../images/project-screengrabs/no-browser-bar/yeti-production.jpg",
+		"heroVid": "/vids/yeti-homePage.mp4",
+		"heroImgMobile": "../images/project-screengrabs/mobile/yeti-production-m.jpg",
 		"tech": [
 			"html",
 			"css/scss",
@@ -47,14 +55,16 @@
 			"gsap",
 			"strapi"
 		],
-		"description": "<p>Some copy goes <strong>here</strong></p>"
+		"description": "<p>Working directly with the UX designer I took designs from Sketch, I built out a Strapi CMS and fully responsive Gatsby static site. The home page features a scroll triggered animation.</p>"
 	},
 	{
 		"title": "Shock Market",
 		"links": [
 			"https://www.shockmarket.org"
 		],
-		"coverImg": "../images/project-screengrabs/shockmarket.jpg",
+		"coverImg": "../images/project-screengrabs/no-browser-bar/shockmarket.jpg",
+		"heroImg": "../images/project-screengrabs/full-screen-browser/shock-market-fs.jpg",
+		"heroImgMobile": "../images/project-screengrabs/mobile/shock-market-m.jpg",
 		"tech": [
 			"html",
 			"css/scss",
@@ -62,14 +72,16 @@
 			"gatsby",
 			"strapi"
 		],
-		"description": "<p>Some copy goes <strong>here</strong></p>"
+		"description": "<p>For this project I fetch data from a JSON endpoint created by a backend developer to display sobering statistics around gun violence and transform them into content that could be shared on Twitter. I made a dynamic template that created pages for each statistic. The backend developer then has the page that is made into an image saved to a S3 bucket with dynamic urls that referenced in the frontend. I set up a Strapi CMS to input and control which pre-written tweet messages correspond to each potential recipient.</p>"
 	},
 	{
 		"title": "MullenLowe U.S.",
 		"links": [
 			"https://us.mullenlowe.com"
 		],
-		"coverImg": "../images/project-screengrabs/mlus.jpg",
+		"coverImg": "../images/project-screengrabs/no-browser-bar/mlus.jpg",
+		"heroVid": "../vids/mlus.mp4",
+		"heroImgMobile": "../images/project-screengrabs/mobile/mlus-m.jpg",
 		"tech": [
 			"html",
 			"css/scss",
@@ -78,14 +90,16 @@
 			"gsap",
 			"strapi"
 		],
-		"description": "<p>Some copy goes <strong>here</strong></p>"
+		"description": "<p>Working with a colleague I built out the navigation hover animation, in addition to several pages. Due to time constraints the original build used hard coded JSON in the repo as a data source. I set up a Strapi CMS and refractored the code to pull in the content from the CMS and eliminated the hard coded content.</p>"
 	},
 	{
 		"title": "Corona USA",
 		"links": [
 			"https://www.coronausa.com"
 		],
-		"coverImg": "../images/project-screengrabs/coronausa.jpg",
+		"coverImg": "../images/project-screengrabs/no-browser-bar/coronausa.jpg",
+		"heroImg": "../images/project-screengrabs/full-screen-browser/coronausa-fs.jpg",
+		"heroImgMobile": "../images/project-screengrabs/mobile/coronausa-m.jpg",
 		"tech": [
 			"html",
 			"css/scss",
@@ -93,14 +107,16 @@
 			"jquery",
 			"shopify"
 		],
-		"description": "<p>Some copy goes <strong>here</strong></p>"
+		"description": "<p>Working directly with the UX designer I took designs from Sketch and built a custom Shopify theme.</p><p  class='footnote'>Disclaimer: This site has since been taken over by another agency.</p>"
 	},
 	{
 		"title": "Today’s Military Relevant Articles",
 		"links": [
 			"https://www.todaysmilitary.com/relevant-articles"
 		],
-		"coverImg": "../images/project-screengrabs/tm-relevant-articles.jpg",
+		"coverImg": "../images/project-screengrabs/no-browser-bar/tm-relevant-articles.jpg",
+		"heroImg": "../images/project-screengrabs/full-screen-browser/tm-relevant-articles-fs.jpg",
+		"heroImgMobile": "../images/project-screengrabs/mobile/tm-relevant-articles-m.jpg",
 		"tech": [
 			"html",
 			"css/scss",
@@ -108,7 +124,7 @@
 			"jquery",
 			"drupal"
 		],
-		"description": "<p>Some copy goes <strong>here</strong></p>"
+		"description": "<p>The client requested that articles from other military sources that related to the site content but... Working with the development group leader I set up Drupal to import data from a csv to generate a page for each article.</p>"
 	},
 	{
 		"title": "Today’s Military Forbes Stories",
@@ -122,7 +138,9 @@
 			"https://www.todaysmilitary.com/careers-benefits/employment-after-military/dyan-gibbens",
 			"https://www.todaysmilitary.com/careers-benefits/employment-after-military/devlin-braswell"
 		],
-		"coverImg": "../images/project-screengrabs/tm-forbes.jpg",
+		"coverImg": "../images/project-screengrabs/no-browser-bar/tm-forbes.jpg",
+		"heroImg": "../images/project-screengrabs/full-screen-browser/tm-forbes-stories-fs.jpg",
+		"heroImgMobile": "../images/project-screengrabs/mobile/tm-forbes-stories-m.jpg",
 		"tech": [
 			"html",
 			"css/scss",

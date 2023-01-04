@@ -1,4 +1,5 @@
 html {
+  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
@@ -18,8 +19,8 @@ p {
   padding: 0;
 }
 
-
 body {
+  font-size: 1.6rem;
   color: var(--main-color);
   background-color: var(--background-color);
   font-family: 'OpenSans Regular', sans-serif;
@@ -34,12 +35,21 @@ button {
   padding: 0;
   outline: none;
   border: none;
+  background-color: transparent;
 }
 
 .container {
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
-  max-width: 1200px;
+
+  @media screen and (min-width: 1024px) {
+    width: 80%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 70%;
+    max-width: 1200px;
+  }
 }
 
 ul {
@@ -51,16 +61,23 @@ ul {
 
 .section-header {
   position: relative;
-  @include fontSize(30);
-  margin-bottom: #{calc(60px / $base)}rem;
+  font-size: clamp(2rem, 2.25vw, 2.6rem);
+  font-family: 'OpenSans SemiCond SemiBold', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 4rem;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 6rem;
+  }
 
   &--about {
     margin-bottom: 0;
   }
 
   &--more {
-    @include fontSize(28);
-    margin-bottom: #{calc(30px / $base)}rem;
+    font-size: clamp(1.8rem, 2.25vw, 2.4rem);
+    margin-bottom: 3rem;
   }
 
   &:after {
@@ -70,8 +87,9 @@ ul {
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
-    height: 2px;
-    background-color: var(--accent-color);
+    height: 1.5px;
+    background-color: var(--black-white);
+    opacity: .2;
     transition: var(--toggle-transition);
   }
 

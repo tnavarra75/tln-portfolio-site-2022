@@ -1,0 +1,45 @@
+.detail-hero {
+  position: relative;
+
+  &__desktop.gatsby-image-wrapper,
+  &__desktop {
+    position: absolute;
+    left: 10%;
+    top: 5%;
+    width: 80%;
+  }
+}
+
+
+.mobile-wrap {
+  position: absolute;
+  bottom: -1vw;
+  right: 0;
+  width: 17%;
+  overflow: hidden;
+
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 2.5%;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   width: 90%;
+  //   height: 10vw;
+  //   background-color: #fff;
+  // }
+
+  &__img.gatsby-image-wrapper {
+    position: absolute;
+    width: 90%;
+    top: 2.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1vw;
+    // aspect-ratio: 15.7 / 32;
+  }
+
+  img {
+    object-position: center top;
+  }
+}

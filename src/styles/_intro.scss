@@ -1,53 +1,110 @@
 .intro {
   position: relative;
   background-color: var(--background-intro);
-  height: 76vh;
-  padding-bottom: 6vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
   transition: var(--toggle-transition);
 
+  @media screen and (min-width: 744px) {
+    padding: 2rem 0 3.4rem;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 3rem 0 4.6rem;
+  }
+
   &__wrap {
+    width: 90%;
+    margin: auto;
     position: relative;
-    padding-left: 15%;
+    padding: 6rem 0;
+
+    @media screen and (min-width: 744px) {
+      width: 100%;
+      padding: 5vw 0;
+    }
+
+    @media screen and (min-width: 1024px) {
+      padding: 9vw 0;
+    }
+  }
+
+  &__headline,
+  &__text,
+  &__ctas {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media screen and (min-width: 1024px) {
+      width: 80%;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      width: 70%;
+    }
   }
 
 
   &__headline {
-    @include fontSize(40);
-    padding-bottom: 30px;
+    font-size: clamp(3rem, 3.5vw, 4rem);
+    padding-bottom: clamp(2.6rem, 2vw, 3rem);
 
     span {
-      color: var(--accent-color)
+      color: var(--accent-color);
+      font-family: 'OpenSans SemiBold';
     }
   }
 
   &__text {
-    @include fontSize(26);
+    font-size: clamp(1.8rem, 1.8vw, 2.6rem);
+    line-height: 1.7;
+
+    @media screen and (min-width: 744px) {
+      line-height: 1.5;
+    }
 
     &:before {
-      content:"";
-      float: right;
-      width: 35vw;
-      height: 20vh;
-      // background-color: magenta;
-      // clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
-      shape-outside: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+      @media screen and (min-width: 744px) {
+        content: "";
+        float: right;
+        width: 32vw;
+        height: 20vh;
+        // background-color: magenta;
+        // clip-path: polygon(32% 0, 100% 0, 100% 100%, 0 100%);
+        shape-outside: polygon(28% 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+      @media screen and (min-width: 1024px) {
+        width: 24vw;
+        // clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%);
+        shape-outside: polygon(28% 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: 18vw;
+        // clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%);
+        shape-outside: polygon(28% 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+
     }
 
     span {
-      color: var(--accent-color);
+      color: var(--accent-color);font-family: 'OpenSans SemiBold';
     }
   }
 
   &__ctas {
-    display: flex;
     gap: 3rem;
-    margin-top: 30px;
-    width: fit-content;
+    margin-top: 3rem;
     font-family: 'OpenSans SemiCond Regular';
+
+    @media screen and (min-width: 640px) {
+      display: flex;
+    }
   }
 
   &__cta {
@@ -55,39 +112,34 @@
     display: block;
     color: var(--accent-color);
     text-decoration: none;
-    @include fontSize(20);
+    font-size: clamp(1.6rem, 2vw, 2rem);
 
     &--view {
-      margin-right: 30px;
-    }
+      svg {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 3rem;
+        transform-origin: center;
+        transition: .2s ease-out;
+      }
 
-    &:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 100%;
-      background: var(--accent-color);
-      width: 22px;
-      height: 2px;
-      margin-left: 10px;
-    }
-
-    &:before {
-      content: '';
-      position: absolute;
-      width: 10px;
-      aspect-ratio: 1/1;
-      border-top: 2px solid var(--accent-color);
-      border-right: 2px solid var(--accent-color);
-      // transform: rotate(45deg);
-      top: 50%;
-      transform: translateY(-50%) rotate(45deg);
-      left: calc(100% + 20px);
+      @include can-hover() {
+        &:hover {
+          svg {
+            transform: rotate(90deg);
+            transition: .4s ease-in;
+          }
+        }
+      }
     }
 
     &--download {
       margin-top: 0;
+
+      svg {
+        position: relative;
+        bottom: -2px; // visual cheat
+      }
 
       &:after,
       &:before {
@@ -97,20 +149,26 @@
   }
 
   .close-tag-wrap {
-    position: absolute;
-    top: 50%;
-    right: -9.5vw;
-    height: 60vh;
-    transform: translateY(-50%);
-    
-    svg {
-      width: 100%;
-      height: 100%;
+    display: none;
+
+    @media screen and (min-width: 744px) {
       display: block;
-      stroke: var(--accent-color);
-      stroke-width: 2;
-      fill: var(--close-tag-fill);
-      transition: var(--toggle-transition);
+      position: absolute;
+      top: 50%;
+      right: -9.5vw;
+      width: 45vw;
+      transform: translateY(-50%);
+
+      svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+        stroke: var(--accent-color);
+        stroke-width: 2;
+        fill: var(--close-tag-fill);
+        transition: var(--toggle-transition);
+      }
     }
+
   }
 }

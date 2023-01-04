@@ -1,11 +1,22 @@
 import * as React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-// import Headshot from '../images/headshot-angle.svg'
+import { motion } from 'framer-motion'
 
 const About = () => (
-  <section id="about" className='about container' aria-label='about'>
-    <h2 className='section-header section-header--about'><span className='section-header__text'>my story</span></h2>
-    <h3 className='about__subhead'>/ the journey to dev</h3>
+  <motion.section 
+    id="about" 
+    className='about container' 
+    aria-label='about'
+    initial="hidden"
+    whileInView="visible"
+    transition={{duration: 1}}
+    variants={{
+      visible: {opacity: 1},
+      hidden: {opacity: 0}
+    }}
+    >
+    <h2 className='section-header section-header--about'><span className='section-header__text'>about me</span></h2>
+    <h3 className='about__subhead'>/ my journey to dev</h3>
     <div>
       <div className='about__text'>
         
@@ -17,7 +28,7 @@ const About = () => (
       </div>
       
     </div>
-  </section>
+  </motion.section>
 )
 
 export default About

@@ -9,7 +9,7 @@ const Projects = ({ projects, mode }) => {
   return (
     <section id="projects" className='projects container' aria-label='projects'>
       <h2 className='section-header'>
-        <span className='section-header__text'>featured projects</span>
+        <span className='section-header__text'>projects</span>
       </h2>
       <div className={`project-grid ${activeId !== null ? 'active' : ''}`}>
         {projects.map((project, i) => (

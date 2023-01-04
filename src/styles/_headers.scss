@@ -1,22 +1,42 @@
+.headroom--unfixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  @media screen and (min-width: 1024px) {
+    position: initial;
+  }
+}
+
+// override headroom in mobile
+.headroom--unpinned,
+.headroom--unfixed {
+  @media screen and (max-width: 1023px) {
+    position: fixed !important;
+    transform: translate3d(0px, 0px, 0px) !important;
+  }
+}
+
 .headroom {
   z-index: 999 !important;
 }
 
-// .headroom--pinned.headroom--scrolled {
-//   .header {
-//     padding: .5rem 2vw;
-//     transition: .2s;
-//   }
-// }
-
 .header {
+  position: relative;
   background-color: var(--background-intro);
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 1.25rem 2vw;
+  gap: 2rem;
+  padding: 1.5rem 5vw;
   z-index: 9999;
   transition: var(--toggle-transition);
+
+  @media screen and (min-width: 744px) {
+    padding: 2rem 2vw;
+  }
 
   &.project {
     background-color: var(--background-color);
@@ -24,42 +44,22 @@
 }
 
 .logo {
+  display: block;
   position: fixed;
   top: 1.25rem;
-  left: 2vw;
-  width: 3vw;
-  max-width: 50px;
+  left: 5vw;
+  width: clamp(3.6rem, 3vw, 5rem);
   z-index: 9999;
+
+  @media screen and (min-width: 744px) {
+    left: 2vw;
+  }
 
   svg {
     display: block;
     fill: var(--accent-color);
   }
 }
-
-.mode-switch {
-  cursor: pointer;
-  width: 2.5vw;
-  max-width: 40px;
-  background: transparent;
-
-  &:focus-visible {
-    border: 1px solid magenta;
-  }
-
-  svg {
-    display: block;
-    fill: var(--black-white);
-    opacity: .6;
-
-    &:hover {
-      fill: var(--yellow);
-      opacity: 1;
-      transition: 2s ease-in-out;
-    }
-  }
-}
-
 
 .mode-switch-alt {
   cursor: pointer;
@@ -72,7 +72,7 @@
       +.toggle-label {
         .toggle-ball {
           left: calc(100% - 24px);
-          transition: .2s ease-in;
+          transition: left .3s ease-in-out;
         }
       }
     }
@@ -96,29 +96,14 @@
     width: 22px;
     height: 22px;
     border-radius: 100%;
-    transition: .2s ease-in;
     padding: 2px;
+    transition: left .3s ease-in-out;
   }
-
-
-  // width: 2.5vw;
-  // max-width: 40px;
-  // background: transparent;
-
-  // &:focus-visible {
-  //   border: 1px solid magenta;
-  // }
 
   svg {
     display: block;
     fill: var(--yellow);
     opacity: 1;
-
-    // &:hover {
-    //   fill: var(--yellow);
-    //   opacity: 1;
-    //   transition: .2s ease-in-out;
-    // }
   }
 }
 
@@ -129,7 +114,22 @@
   }
 
   .toggle-ball {
-    background-color: rgba($color: #000000, $alpha: .4);
+    background-color: var(--accent-color);
+    transform: rotate(90deg);
+    transition: all .3s ease-in-out;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: calc(100% - 14px);
+      height: calc(100% - 14px);
+      transform: translate(-50%, -50%);
+      border-radius: 100%;
+      background-color: var(--yellow);
+      transition: var(--toggle-transition);
+    }
   }
 
   svg {
@@ -138,17 +138,21 @@
 }
 
 
-
 .socials {
-  position: fixed;
-  bottom: 50%;
-  transform: translateY(50%);
-  left: 2vw; 
-  z-index: 99;
+  display: none;
+
+  @media screen and (min-width: 1024px) {
+    display: block;
+    position: fixed;
+    bottom: 50%;
+    transform: translateY(50%);
+    left: 2vw; 
+    z-index: 99;
+  }
 }
 
 .social {
-  width: 1.7vw;
+  width: clamp(2.4rem, 2vw, 3rem);
   margin-bottom: 20px;
 
   &:last-of-type {
@@ -156,13 +160,13 @@
   }
 
   &.resume {
-    width: 1.5vw;
+    width: clamp(2rem, 1.875vw, 2.6rem);
   }
 
   svg {
     display: block;
     fill: var(--black-white);
-    opacity: .5;
+    opacity: .2;
     transition: .2s ease-in-out;
 
     @include can-hover() {

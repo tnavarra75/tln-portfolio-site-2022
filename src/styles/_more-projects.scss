@@ -1,34 +1,69 @@
 .more-projects {
-  margin-top: #{calc(200px / $base)}rem;
+  margin-top: 10rem;
+
+  @media screen and (min-width: 744px) {
+    margin-top: 20rem;
+  }
+
+  .project-slide {
+    display: block;
+  }
 
   .swiper {
-    padding-bottom: #{calc(60px / $base)}rem;
+    padding-bottom: 6rem;
+    width: calc(105% + 1px);
+
+    @media screen and (min-width: 744px) {
+      width: initial;
+    }
   }
   
   .swiper-button-next,
   .swiper-button-prev {
     color: var(--main-color);
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     border-radius: 100%;
     background-color: rgba($color: #fff, $alpha: .2);
     margin-top: 0;
     top: auto;
     bottom: 0;
 
+    @media screen and (min-width: 744px) {
+      height: 40px;
+      width: 40px;
+    }
+
     &:after {
-      font-size: 20px;
+      font-size: 16px;
+
+      @media screen and (min-width: 744px) {
+        font-size: 20px;
+      }
     }
   }
 
   .swiper-button-prev {
-    left: calc(50% - 80px);
-    padding-right: 5px;
+    right: calc(50% + 30px);
+    left: auto;
+    padding-right: 3px;
+
+    @media screen and (min-width: 744px) {
+      right: calc(50% + 50px);
+      padding-right: 5px;
+    }
   }
 
   .swiper-button-next {
-    right: calc(50% - 80px);
-    padding-left: 5px;
+    left: calc(50% + 30px);
+    right: auto;
+    // transform: translateX(-50%);
+    padding-left: 3px;
+
+    @media screen and (min-width: 744px) {
+      left: calc(50% + 50px);
+      padding-left: 5px;
+    }
   }
 
   .swiper-pagination {
@@ -47,7 +82,7 @@
 .light {
   .more-projects {
     .swiper-slide {
-      border: .5px solid rgba($color: #fff, $alpha: .2);
+      border: .5px solid rgba($color: #000, $alpha: .2);
     }
 
     .swiper-button-next,

@@ -12,7 +12,7 @@ const Tech = () => {
       className='tech container'
       initial="hidden"
       whileInView="visible"
-      transition={{duration: 3}}
+      transition={{duration: 1}}
       variants={{
         visible: {opacity: 1},
         hidden: {opacity: 0}

@@ -1,21 +1,25 @@
 .project-card {
   background-color: var(--background-color);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   transition: .2s ease-in-out;
-  padding: 2px;
+  padding: 2rem 0 0;
+
+  @media screen and (min-width: 1024px) and (hover: hover) and (pointer: fine)  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: .2rem;
+  }
 
   &__title {
     color: var(--main-color);
     font-family: 'OpenSans Regular';
     text-align: left;
-    @include fontSize(30);
+    font-size: clamp(2rem, 2vw, 3rem);
     line-height: 1.1;
     padding-bottom: 10px;
   }
@@ -23,12 +27,19 @@
   &__link {
     position: relative;
     display: inline-block;
+    line-height: 1.5;
+    font-size: clamp(1.4rem, 1.5vw, 1.6rem);
+    text-align: left;
+    text-decoration: none;
     width: fit-content;
     color: var(--main-color);
-    text-decoration: none;
-    opacity: .4;
-    margin-bottom: 5px;
-    @include fontSize(14);
+    opacity: .6;
+    margin-bottom: .05rem;
+
+    &:hover {
+      opacity: 1;
+      transition: .2s ease;
+    }
   }
 
   &__arrow-icon {
@@ -46,51 +57,55 @@
   &__tech-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    padding: 20px 0 30px 0;
+    gap: 1.6rem;
+    padding: 2rem 0 3rem 0;
   }
 
   &__cta {
     position: relative;
     width: fit-content;
     color: var(--accent-color);
-    font-family: 'OpenSans SemiCond Regular';
+    font-family: 'OpenSans SemiCond SemiBold';
     text-decoration: none;
-    @include fontSize(18);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    padding: .8rem 1.2rem;
+    border: 1px solid var(--accent-color);
+    transition: .2s;
 
-
-    &:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 100%;
-      background: var(--accent-color);
-      width: 22px;
-      height: 2px;
-      margin-left: 10px;
-    }
-
-    &:before {
-      content: '';
-      position: absolute;
-      width: 10px;
-      aspect-ratio: 1/1;
-      border-top: 2px solid var(--accent-color);
-      border-right: 2px solid var(--accent-color);
-      // transform: rotate(45deg);
-      top: 50%;
-      transform: translateY(-50%) rotate(45deg);
-      left: calc(100% + 20px);
+    @include can-hover() {
+      &:hover {
+        color: var(--background-color);
+        background-color: var(--accent-color);
+        transition: .2s;
+      }
     }
   }
 
   .tech-item {
-    @include fontSize(14);
+    font-size: 1.4rem;
     margin-bottom: 0;
   }
 
   .icon {
     width: 15px;
+  }
+}
+
+.light {
+  .project-card {
+    &__cta {
+      background-color: var(--accent-color);
+      color: var(--background-color);
+
+      @include can-hover() {
+        &:hover {
+          color: var(--accent-color);
+          background-color: transparent;
+          transition: .2s;
+        }
+      }
+    }
   }
 }

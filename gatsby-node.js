@@ -31,7 +31,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const projectTemplate = path.resolve("./src/templates/project-detail.js");
 
   projectItems.forEach(project => {
-    const slug = project.node.title.toLowerCase().split(' ').join('-').split('.').join('');
+    const slug = project.node.title.toLowerCase().split(' ').join('-').split('.').join('').split("’").join('');
 
     createPage({
       path: `/projects/${slug}`,
