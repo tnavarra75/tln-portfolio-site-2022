@@ -24,6 +24,7 @@ const MoreProjects = ({ caseStudies }) => {
         slidesPerView={1.5}
         keyboard
         navigation={{ clickable: true }}
+        slideToClickedSlide={false}
         spaceBetween={20}
         breakpoints={{
           744: {
@@ -37,7 +38,7 @@ const MoreProjects = ({ caseStudies }) => {
             <SwiperSlide key={i}>
               <Link
                 className="project-slide"
-                aria-label={`study.node.title project slide`}
+                aria-label={`${study.node.title} project slide`}
                 to={`/projects/${study.node.title
                   .toLowerCase()
                   .replaceAll(" ", "-")
@@ -50,7 +51,6 @@ const MoreProjects = ({ caseStudies }) => {
                   alt={study.node.title}
                 />
               </Link>
-              {/* <h3>{study.node.title}</h3> */}
             </SwiperSlide>
           )
         })}

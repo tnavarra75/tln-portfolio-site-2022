@@ -5,7 +5,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 const DetailHero = ({ img, mobileImg, vid, bgColor }) => {
   return (
     <div className="detail-hero">
-      <StaticImage src="../images/m1_laptop.png" alt="alt text" loading="eager"  />
+      <StaticImage src="../images/m1_laptop.png" alt="laptop" placeholder="none"  />
       {img && (
         <GatsbyImage
           image={img}
@@ -25,9 +25,8 @@ const DetailHero = ({ img, mobileImg, vid, bgColor }) => {
           className="mobile-wrap__img"
         />
         <StaticImage
-          loading="eager"
           src="../images/iPhone_2x.png"
-          alt="alt text"
+          alt="mobile phone"
           className="mobile-wrap__phone"
         />
       </div>

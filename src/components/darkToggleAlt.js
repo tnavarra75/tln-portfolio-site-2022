@@ -25,7 +25,7 @@ const DarkToggleAlt = () => {
   return (
     <div className='mode-switch-alt'>
       <input id='toggle' type="checkbox" className='toggle-input' onChange={() => handleMode()}/>
-      <label htmlFor='toggle' className='toggle-label'>
+      <label htmlFor='toggle' className='toggle-label' aria-label="dark-light mode toggle" >
         <div className='toggle-ball'>
           {isDarkMode
             ? <DarkMode />
@@ -34,16 +34,6 @@ const DarkToggleAlt = () => {
         </div>
       </label>
     </div>
-    
-    // <button
-    //   className='mode-switch mode-switch-alt'
-    //   onClick={() => handleMode()}
-    // >
-    //   {!isDarkMode
-    //     ? <DarkMode />
-    //     : <LightMode />
-    //   }
-    // </button>
   )
 }
 
