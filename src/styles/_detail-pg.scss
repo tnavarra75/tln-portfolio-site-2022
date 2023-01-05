@@ -45,7 +45,7 @@
 
   &__desc {
     order: 2;
-    max-width: 720px;
+    max-width: 780px;
 
     @media screen and (min-width: 744px) {
       order: initial;
@@ -58,6 +58,10 @@
       line-height: 1.7;
       padding-bottom: 2rem;
       font-size: clamp(1.4rem, 2vw, 1.6rem);
+    }
+
+    .footnote {
+      font-size: 1.2rem;
     }
   }
 

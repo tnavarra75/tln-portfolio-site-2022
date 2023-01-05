@@ -21,10 +21,13 @@ const About = () => (
       <div className='about__text'>
         
         <div className='about__headshot'><StaticImage src='../images/headshot-angle.svg' alt="illustrated headshot" placeholder='none' /></div>
-        When I graduated from high school graphic art programs were not widespread and I didn’t think I could make a living pursuing art so I went to a traditional university. I studied communications (with a minor in business) and did a couple internships in account services. Upon graduation I was hired by the head of Creative Services at Mullen to help the traffic, production and art production departments. I spent two years as a traffic manager — wishing I could be doing the work I was managing. I asked for IT to put the Adobe Creative Suite on my iMac, got the Quark Bible for Christmas and taught myself the programs. I was fortunate to be offered a position in the studio with no experience — I don’t think the studio manager realized just how little I knew! Over the years in the studio I worked on a wide range of mediums. I’ve done everything from supporting pitches to preparing files for print, direct-mail, OOH and station dominations.
+        My path to frontend development may not have been linear, but my desire to learn and grow has been a constant. My first job out of college was in project management, my formal title was "traffic manager". Cue the comments about what the heck did that mean. Did I spend four years in college to learn how to direct cars? No dad... 
         <br />
         <br />
-        Five years ago I made the transition to senior digital production designer. I primarily work on emails, banners, social posts, landing pages and sites. I also do work for our development group, coding emails and landing pages. Currently I’m working full time with the development group while a co-op fills my production design role.
+        I quickly found myself wanting to do the work I was managing so I taught myself the programs and convinced the studio manager to take a shot on me. Years later I can still cut foam core like a pro and have produced graphics for a wide variety of mediums. 
+        <br />
+        <br />
+        Over the years I developed an interest in code. I often contributed to the development group building emails and landing pages. In Jan of 2019 I was given the opportunity to spend six months doing development full time. That time solidified my desire to make the transition and once again I convinced a manager to take a chance on me. While my title didn’t formally change until Jan of 2021 I have been working with the development group full time since July of 2020. 
       </div>
       
     </div>

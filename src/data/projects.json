@@ -18,7 +18,7 @@
 			"jquery",
 			"aem"
 		],
-		"description": "<p>Working directly with the backend developer I was responsible for the parts of this large site that are related to the product using a combination of AJAX calls, data layers and custom AEM HTL templates. The PDP detail page is a tool that allows the viewer to see what cabinet styles, material, and color/finish combinations are available. The informational copy for each combination is dynamic as well as the content of the carousel lower on the page. There is also the ability to overlay hardware selections. The filterable landing pages for style, color and hardware show a more traditional view. A compare tool on the style and color/finish pages allows the viewer to see selected styles side by side.</p>"
+		"description": "<p>Working directly with the backend developer I was responsible for the parts of the site that are related to the product. AJAX calls, data layers and custom AEM HTL templates were used to display the product on various pages and carousels.</p><p>The PDP detail page is a tool that allows the user to visualize all the possible cabinet style, material, and color/finish combinations available. The informational copy for each combination is dynamic as well as the content of the carousel lower on the page. There is also the ability to overlay hardware selections.</p><p>The filterable landing pages for style, color and hardware show a more traditional view. A compare tool on the style and color/finish pages allows the viewer to see selected styles side by side.</p>"
 	},
 	{
 		"title": "American Woodmark Corporate Site",
@@ -35,7 +35,7 @@
 			"jquery",
 			"javascript"
 		],
-		"description": "<p>Working with a development lead I styled core AEM components to match designs from Sketch, styled Market forms, created animated the buttons, used core components to create custom carousel styles.</p>"
+		"description": "<p>Working with a development lead I styled core AEM components to match designs from Zeplin, styled Marketo forms, created animated buttons and used javascript to transform core components into custom carousels and select menus.</p>"
 	},
 	{
 		"title": "Yeti Production",
@@ -55,7 +55,7 @@
 			"gsap",
 			"strapi"
 		],
-		"description": "<p>Working directly with the UX designer I took designs from Sketch, I built out a Strapi CMS and fully responsive Gatsby static site. The home page features a scroll triggered animation.</p>"
+		"description": "<p>For this project I built out a Strapi CMS and a fully responsive site using Gatsby and designs provided via Zeplin. The home page features a scroll triggered animation using the Greensock Animation Platform.</p>"
 	},
 	{
 		"title": "Shock Market",
@@ -72,7 +72,7 @@
 			"gatsby",
 			"strapi"
 		],
-		"description": "<p>For this project I fetch data from a JSON endpoint created by a backend developer to display sobering statistics around gun violence and transform them into content that could be shared on Twitter. I made a dynamic template that created pages for each statistic. The backend developer then has the page that is made into an image saved to a S3 bucket with dynamic urls that referenced in the frontend. I set up a Strapi CMS to input and control which pre-written tweet messages correspond to each potential recipient.</p>"
+		"description": "<p>For this project I fetched data from a JSON endpoint to take sobering statistics around gun violence and transform them into content that could be shared on Twitter using designs provided via Zeplin. A dynamic template creates a page for each statistic. Each statistic page is made into an image that is saved to a S3 bucket with dynamic urls that are referenced by the frontend. A Strapi CMS was created for managing the pre-written tweet messages.</p>"
 	},
 	{
 		"title": "MullenLowe U.S.",
@@ -90,7 +90,7 @@
 			"gsap",
 			"strapi"
 		],
-		"description": "<p>Working with a colleague I built out the navigation hover animation, in addition to several pages. Due to time constraints the original build used hard coded JSON in the repo as a data source. I set up a Strapi CMS and refractored the code to pull in the content from the CMS and eliminated the hard coded content.</p>"
+		"description": "<p>Working with a colleague I built several pages for this site working from designs provided via Zeplin. I created a hover animation for the octopus logo and created a component for the text animation used throughout the site.</p><p>Due to time constraints the original build used hard coded JSON as a data source. I set up a Strapi CMS and refactored the code to pull in the content from the CMS and eliminated the hard coded content.</p>"
 	},
 	{
 		"title": "Corona USA",
@@ -107,7 +107,7 @@
 			"jquery",
 			"shopify"
 		],
-		"description": "<p>Working directly with the UX designer I took designs from Sketch and built a custom Shopify theme.</p><p  class='footnote'>Disclaimer: This site has since been taken over by another agency.</p>"
+		"description": "<p>Working from designs provided via Zeplin, I built a fully responsive custom Shopify theme for this site.</p><p  class='footnote'>Note: This site has since been taken over by another agency.</p>"
 	},
 	{
 		"title": "Today’s Military Relevant Articles",
@@ -124,7 +124,7 @@
 			"jquery",
 			"drupal"
 		],
-		"description": "<p>The client requested that articles from other military sources that related to the site content but... Working with the development group leader I set up Drupal to import data from a csv to generate a page for each article.</p>"
+		"description": "<p>For this project I worked with the development lead to pull data into Drupal from a csv generated by an article aggregator tool. Working from designs provided via Zeplin, I used a Drupal generated JSON endpoint to create a filterable overview page which links off to individual articles pages. The article pages are generated by Drupal mapping the csv to custom paragraph types.</p>"
 	},
 	{
 		"title": "Today’s Military Forbes Stories",
@@ -148,6 +148,6 @@
 			"jquery",
 			"drupal"
 		],
-		"description": "<p>Some copy goes <strong>here</strong></p>"
+		"description": "<p>This project involved incorporating new content into an existing Drupal site. Working from designs provided via Zeplin, a carousel was added to an existing overview page which linked out to individual detail pages. The template for the corresponding detail pages included multiple custom paragraphs for various types of content such as a custom audio player, and various image/text layouts.</p>"
 	}
 ]
