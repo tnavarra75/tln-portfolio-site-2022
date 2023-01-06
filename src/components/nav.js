@@ -62,8 +62,8 @@ const Nav = ({ location, mobileOpen, toggleMenu }) => {
           <Link
             to="/#projects"
             className={`nav__link ${activeId === "projects"}`}
-            onClick={() => toggleMenu()}
-            onKeyDown={() => toggleMenu()}
+            onClick={() => mobileOpen ? toggleMenu() : null}
+            onKeyDown={() => mobileOpen ? toggleMenu() : null}
           >
             projects
           </Link>
@@ -72,8 +72,8 @@ const Nav = ({ location, mobileOpen, toggleMenu }) => {
           <Link
             to="/#skills"
             className={`nav__link ${activeId === "skills" ? "active" : ""}`}
-            onClick={() => toggleMenu()}
-            onKeyDown={() => toggleMenu()}
+            onClick={() => mobileOpen ? toggleMenu() : null}
+            onKeyDown={() => mobileOpen ? toggleMenu() : null}
           >
             skills
           </Link>
@@ -82,8 +82,8 @@ const Nav = ({ location, mobileOpen, toggleMenu }) => {
           <Link
             to="/#about"
             className={`nav__link ${activeId === "about" ? "active" : ""}`}
-            onClick={() => toggleMenu()}
-            onKeyDown={() => toggleMenu()}
+            onClick={() => mobileOpen ? toggleMenu() : null}
+            onKeyDown={() => mobileOpen ? toggleMenu() : null}
           >
             about me
           </Link>
@@ -94,8 +94,8 @@ const Nav = ({ location, mobileOpen, toggleMenu }) => {
             href="/TL_resume_2022.pdf"
             target="_blank"
             rel="noreferrer"
-            onClick={() => toggleMenu()}
-            onKeyDown={() => toggleMenu()}
+            onClick={() => mobileOpen ? toggleMenu() : null}
+            onKeyDown={() => mobileOpen ? toggleMenu() : null}
           >
             résumé
           </a>

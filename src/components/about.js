@@ -21,13 +21,10 @@ const About = () => (
       <div className='about__text'>
         
         <div className='about__headshot'><StaticImage src='../images/headshot-angle.svg' alt="illustrated headshot" placeholder='none' /></div>
-        My path to frontend development may not have been linear, but my desire to learn and grow has been a constant. My first job out of college was in project management, my formal title was "traffic manager". Cue the comments about what the heck did that mean. Did I spend four years in college to learn how to direct cars? No dad... 
+        My path to frontend development may not have been linear, but my desire to learn and grow has been a constant. I got my start with Mullen (currently known as MullenLowe) as a Traffic Manager where I was surrounded by extraordinary Creative talent and learned by osmosis. As I grew in my craft, I pursued new avenues and opportunities within MullenLowe, including the Studio as a Production Artist for traditional mediums and Production Design for exclusively digital mediums.
         <br />
         <br />
-        I quickly found myself wanting to do the work I was managing so I taught myself the programs and convinced the studio manager to take a shot on me. Years later I can still cut foam core like a pro and have produced graphics for a wide variety of mediums. 
-        <br />
-        <br />
-        Over the years I developed an interest in code. I often contributed to the development group building emails and landing pages. In Jan of 2019 I was given the opportunity to spend six months doing development full time. That time solidified my desire to make the transition and once again I convinced a manager to take a chance on me. While my title didn’t formally change until Jan of 2021 I have been working with the development group full time since July of 2020. 
+        Today, I am a bit of a rare breed — a Frontend Developer that is half technical with the skills needed to work in a modern development environment and half creative with the ability to bring designs to life. It's been a wild and wonderful ride! 
       </div>
       
     </div>

@@ -44,6 +44,7 @@ function Seo({ description, title, children }) {
 }
 
 Seo.defaultProps = {
+  title: `Terri Navarra - Frontend Developer`,
   description: ``,
 }
 
