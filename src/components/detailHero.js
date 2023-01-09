@@ -18,7 +18,7 @@ const DetailHero = ({ img, mobileImg, vid, bgColor }) => {
           <source src={vid} />
         </video>
       )}
-      <div className={`mobile-wrap ${bgColor}`}>
+      <div className="mobile-wrap">
         <GatsbyImage
           image={mobileImg}
           alt="alt text"
@@ -26,6 +26,7 @@ const DetailHero = ({ img, mobileImg, vid, bgColor }) => {
         />
         <StaticImage
           src="../images/iPhone_2x.png"
+          placeholder="none"
           alt="mobile phone"
           className="mobile-wrap__phone"
         />
