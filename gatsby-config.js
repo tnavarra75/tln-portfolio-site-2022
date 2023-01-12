@@ -2,8 +2,9 @@ module.exports = {
   siteMetadata: {
     title: `Terri Navarra - Frontend Developer`,
     description: `The portfolio site of Terri Navarra, a frontend developer`,
-    author: `@gatsbyjs`,
+    author: `Terri Navarra`,
     siteUrl: `https://terrinavarra.com/`,
+    image: "/tln-share.jpg"
   },
   plugins: [
     `gatsby-plugin-sass`,
