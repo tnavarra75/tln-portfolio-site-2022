@@ -25,7 +25,7 @@ const DetailHero = ({ img, mobileImg, vid, bgColor }) => {
           className="mobile-wrap__img"
         />
         <StaticImage
-          src="../images/iPhone_2x.png"
+          src="../images/iphone.png"
           placeholder="none"
           alt="mobile phone"
           className="mobile-wrap__phone"

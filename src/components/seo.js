@@ -31,7 +31,7 @@ function Seo({ description, title, children }) {
   return (
     <>
       <title>{title ? `${title} – Terri Navarra` : defaultTitle}</title>
-      <meta name="image" content={image} />
+      <meta name="image" content={site.siteMetadata.image} />
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
@@ -40,7 +40,7 @@ function Seo({ description, title, children }) {
       <meta name="twitter:creator" content={site.siteMetadata?.author || ``} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={site.siteMetadata.image} />
       {children}
     </>
   )
