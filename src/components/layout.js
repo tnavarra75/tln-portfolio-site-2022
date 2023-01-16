@@ -1,7 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import Header from "./header"
-import Seo from "./seo"
 import "../styles/layout.scss"
 import { motion } from "framer-motion"
 
@@ -9,7 +8,6 @@ import { motion } from "framer-motion"
 const Layout = ({ children, detailPage, location, title }) => {
   return (
     <>
-      <Seo title={title} />
       <Header detailPage={detailPage} location={location}/>
       <motion.main
         initial={{ opacity: 0 }}

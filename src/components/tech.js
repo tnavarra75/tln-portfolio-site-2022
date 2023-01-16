@@ -25,9 +25,9 @@ const Tech = () => {
             <li key={i} className='tech__category'>
               <p className='tech__category-name'>{category.category}</p>
               <ul>
-                {category.items.map(item => (
+                {category.items.map((item, i) => (
                   <TechItem
-                    key={item.name}
+                    key={i}
                     item={item}
                   />
                 ))}

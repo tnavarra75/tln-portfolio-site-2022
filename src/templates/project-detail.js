@@ -6,6 +6,7 @@ import TechItem from "../components/techItem"
 import { getTech } from "../utils/getTech"
 import MoreProjects from "../components/moreProjects"
 import DetailHero from "../components/detailHero"
+import Seo from "../components/seo"
 
 const ProjectDetail = ({ data, location }) => {
   const projectDetails = data.allProjectsJson.edges[0].node
@@ -15,13 +16,13 @@ const ProjectDetail = ({ data, location }) => {
       location={location}
       scheme={location.state?.mode ? location.state.mode : "dark"}
       detailPage
-      title={projectDetails.title}
     >
       <div className="container">
         <DetailHero
           vid={projectDetails?.heroVid}
           img={projectDetails.heroImg?.childImageSharp.gatsbyImageData}
           mobileImg={projectDetails.heroImgMobile.childImageSharp.gatsbyImageData}
+          altText={`${projectDetails.title} screengrab`}
         />
         <h1 className="detail-pg__title">{projectDetails.title}</h1>
         <div className="detail-pg__details-wrap">
@@ -30,9 +31,9 @@ const ProjectDetail = ({ data, location }) => {
               className="detail-pg__desc-txt"
               dangerouslySetInnerHTML={{ __html: projectDetails.description }}
             />
-            {projectDetails.links.map(link => (
+            {projectDetails.links.map((link, i) => (
               <a
-                key={link}
+                key={i}
                 href={link}
                 target="blank"
                 rel="noreferrer"
@@ -46,8 +47,8 @@ const ProjectDetail = ({ data, location }) => {
             ))}
           </div>
           <ul className="detail-pg__tech-list">
-            {getTech(projectDetails.tech).map(techObj => (
-              <TechItem key={techObj.name} item={techObj} />
+            {getTech(projectDetails.tech).map((techObj, i) => (
+              <TechItem key={i} item={techObj} />
             ))}
           </ul>
         </div>
@@ -56,6 +57,9 @@ const ProjectDetail = ({ data, location }) => {
     </Layout>
   )
 }
+
+export const Head = ({data}) => <Seo title={data.allProjectsJson.edges[0].node.title} />
+
 
 export const query = graphql`
   query ($title: String!) {

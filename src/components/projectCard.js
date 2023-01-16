@@ -26,8 +26,8 @@ const ProjectCard = ({ title, tech, links, mode }) => {
         </a>
       ))} */}
       <ul className='project-card__tech-list'>
-        {getTech(tech).map(techObj => (
-          <TechItem key={techObj.name} item={techObj} />
+        {getTech(tech).map((techObj, i) => (
+          <TechItem key={i} item={techObj} />
         ))}
       </ul>
       <Link
