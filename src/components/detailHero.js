@@ -2,7 +2,7 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-const DetailHero = ({ img, mobileImg, vid, bgColor }) => {
+const DetailHero = ({ img, mobileImg, vid }) => {
   return (
     <div className="detail-hero">
       <StaticImage src="../images/m1_laptop.png" alt="laptop" placeholder="none"  />
